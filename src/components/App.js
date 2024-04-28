@@ -1,6 +1,5 @@
 import React, { useState,useReducer } from "react";
 
-
 const states = [{
 	name : "Madhya Pradesh",
 	description:"Madhya Pradesh, a large state in central India, retains landmarks from eras throughout Indian history.",
