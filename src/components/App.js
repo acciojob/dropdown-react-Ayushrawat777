@@ -143,7 +143,50 @@ function App()
 	// Do not alter/remove main div
 	return (
 	<div id="main">
-		
+		<select id="state" onChange={handleStateChange} value={selectedState}>
+		  {states.map((state, index) => (
+			<option key={index} value={index}>
+			  {state.name}
+			</option>
+		  ))}
+		</select>
+		<select id="city" onChange={handleCityChange} value={selectedCity}>
+		  {states[selectedState].city.map((city, index) => (
+			<option key={index} value={index}>
+			  {city.name}
+			</option>
+		  ))}
+		</select>
+		<select
+		  id="landmark"
+		  onChange={handleLandmarkChange}
+		  value={selectedLandmark}
+		>
+		  {states[selectedState].city[selectedCity].landmarks.map(
+			(landmark, index) => (
+			  <option key={index} value={index}>
+				{landmark.name}
+			  </option>
+			)
+		  )}
+		</select>
+		<div id="state-title">{states[selectedState].name}</div>
+		<div id="state-description">{states[selectedState].description}</div>
+		<div id="city-title">
+		  {states[selectedState].city[selectedCity].name}
+		</div>
+		<div id="city-description">
+		  {states[selectedState].city[selectedCity].description}
+		</div>
+		<div id="landmark-title">
+		  {states[selectedState].city[selectedCity].landmarks[selectedLandmark]
+			.name}
+		</div>
+		<div id="landmark-description">
+		  {states[selectedState].city[selectedCity].landmarks[selectedLandmark]
+			.description}
+		</div>
+	  
 	</div>
 	);
 }
