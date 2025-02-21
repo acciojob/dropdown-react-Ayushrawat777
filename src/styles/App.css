@@ -1,16 +1,32 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  gap: 10rem;
+  margin: 3rem 10rem;    font-size: 14px;
 }
-
-.bg-pink{
-	background-color:pink;
+.tag-container {
+  margin-top: 17px;
+}
+.tag-container div {
+  margin-top: 17px;
+  display: flex;
+  gap: 24px;
+  justify-content: right;
+}
+#box-name{
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.tag-container div select {
+  padding: 2% 1%;
+  width: 150px;
+}
+option {
+  background-color: grey;
+}
+.box {
+  border: 1px solid #a5a0a0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+  width: 330px;
 }
